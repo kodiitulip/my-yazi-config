@@ -1,0 +1,9 @@
+[submodule "flavors/tokyo-night.yazi"]
+	path = flavors/tokyo-night.yazi
+	url = https://github.com/knownasnaffy/tokyo-night.yazi
+[submodule "plugins/omp.yazi"]
+	path = plugins/omp.yazi
+  url = https://github.com/chenxin-yan/omp.yazi
+[submodule "plugins/kdeconnect-share.yazi"]
+	path = plugins/kdeconnect-share.yazi
+	url = https://github.com/kodiitulip/kdeconnect-share.yazi
