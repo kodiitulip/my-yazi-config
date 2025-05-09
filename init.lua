@@ -3,4 +3,4 @@ require("full-border"):setup({
 	type = ui.Border.ROUNDED,
 })
 
-require("omp"):setup({ config = "/home/kodie/.config/ohmyposh/tokyonight_storm.omp.json" })
+require("omp"):setup({ config = "/home/kodie/.config/omp/catppuccin.omp.json" })
