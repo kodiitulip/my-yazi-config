@@ -26,6 +26,17 @@ prepend_keymap = [
     "f",
     "s",
   ], run = "plugin kdeconnect-share", desc = "KDEConnectShare" },
+  { on = "!", run = 'shell "$SHELL" --block', desc = "Open shell here" },
+  { on = "p", run = "plugin smart-paste", desc = "Smart paste" },
+  { on = "<C-n>", run = 'shell -- dragon -x -i -T "$1"' },
+  { on = "y", run = [
+    'shell -- for path in "$0"; do echo "file://$path"; done | wl-copy -t text/uri-list',
+    "yank",
+  ] },
+  { on = [
+    "g",
+    "r",
+  ], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"' },
 ]
 
 keymap = [
@@ -365,7 +376,7 @@ keymap = [
 keymap = [
   { on = "<C-c>", run = "close", desc = "Cancel input" },
   { on = "<Enter>", run = "close --submit", desc = "Submit input" },
-  { on = "<Esc>", run = "escape", desc = "Go back the normal mode, or cancel input" },
+  { on = "<Esc>", run = "close", desc = "Cancel input" },
   { on = "<C-[>", run = "escape", desc = "Go back the normal mode, or cancel input" },
 
   # Mode
@@ -505,7 +516,7 @@ keymap = [
 [help]
 
 keymap = [
-  { on = "<Esc>", run = "escape", desc = "Clear the filter, or hide the help" },
+  { on = "<Esc>", run = "close", desc = "Clear the filter, or hide the help" },
   { on = "<C-[>", run = "escape", desc = "Clear the filter, or hide the help" },
   { on = "<C-c>", run = "close", desc = "Hide the help" },
 

@@ -115,6 +115,10 @@ image_alloc = 536870912  # 512MB
 image_bound = [0, 0]
 suppress_preload = false
 
+[[plugin.prepend_preloaders]]
+name = "/remote/**"
+run = "noop"
+
 [plugin]
 
 fetchers = [
