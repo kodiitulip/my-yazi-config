@@ -3,4 +3,6 @@ require("full-border"):setup({
 	type = ui.Border.ROUNDED,
 })
 
-require("omp"):setup({ config = "/home/kodie/.config/omp/catppuccin.omp.json" })
+local omp_config = os.getenv("OMP_CONFIG") or "/home/kodie/.config/omp/rose-pine.omp.toml"
+
+require("omp"):setup({ config = omp_config })
